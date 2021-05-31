@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Responsive Sticky Navigation Menu</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!--   jquery   -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <!--   jquery   -->
+
+  <!--   AOS   -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!--   AOS   -->
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="#">Dot Studio</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fa fa-times"></i>
+        </div>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#Portfolio">Portfolio</a></li>
+        <li><a href="#Blog">Blog</a></li>
+        <li><a href="#Price">Price</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fa fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = () => {
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = () => {
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = () => {
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+  <section class="home" id="Home">
+    <div class="container flex">
+      <div class="left" data-aos="fade-up" data-aos-duration="3000">
+        <div class="text">
+          <span class="head_text">Hi There!</span><br><br>
+          <h1>I am Alex Ander <br> A Web Developer </h1>
+          <br>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br><br>
+          <button class="btn ">HIRE ME <i class="fa fa-long-arrow-right"></i></button>
+          <button class="btn1 ">VIEW PORTFOLIO<i class="fa fa-long-arrow-right"></i></button><br> <br><br>
+          <label>+FACEBOOK</label> <label>+TWITTER</label> <label>+LINKEDIN</label>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="About">
+    <div class="container flex">
+      <div class="left" data-aos="fade-up" data-aos-duration="1000">
+        <img src="image/c1.png" alt="">
+      </div>
+      <div class="right" data-aos="fade-down" data-aos-duration="3000">
+        <header>
+          <nav>
+            <ul class="tabs">
+              <li class="tab is-active">
+                <a data-switcher data-tab="1">ABOUT ME</a>
+              </li>
+              <li class="tab">
+                <a data-switcher data-tab="2">SKILLS</a>
+              </li>
+              <li class="tab">
+                <a data-switcher data-tab="3">EXPERIENCE</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <section class="pages">
+            <div class="page is-active" data-page="1">
+              <h2>My Story</h2> <br>
+              <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <br>
+              <h3>I Do Web Design & Developement since I was 18 Years Old</h3>
+              <br>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            </div>
+            <div class="page" data-page="2">
+              <h2>Skills</h2> <br>
+              <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <br>
+              <div class="skills_bar grid">
+                <div class="bar">
+                  <div class="info flex">
+                    <span> WORDPRESS </span>
+                    <span>95%</span>
+                  </div>
+                  <div class="line hl">
+                    <span></span>
+                  </div>
+                </div>
+                <div class="bar">
+                  <div class="info flex">
+                    <span>HTML / CSS</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="line cl">
+                    <span></span>
+                  </div>
+                </div>
+                <div class="bar">
+                  <div class="info flex">
+                    <span>JAVASCRIPT</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="line jl">
+                    <span></span>
+                  </div>
+                </div>
+                <div class="bar">
+                  <div class="info flex">
+                    <span>PHP</span>
+                    <span>70%</span>
+                  </div>
+                  <div class="line pl">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="page" data-page="3">
+              <h3>Art & Creative Director</h3> <br>
+              <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <br>
+              <h3>Wordpress Developer</h3>
+              <br>
+              <h3>UI/UX Designer</h3>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            </div>
+
+          </section>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    window.onload = () => {
+      const tab_switchers = document.querySelectorAll('[data-switcher]');
+
+      for (let i = 0; i < tab_switchers.length; i++) {
+        const tab_switcher = tab_switchers[i];
+        const page_id = tab_switcher.dataset.tab;
+
+        tab_switcher.addEventListener('click', () => {
+          document.querySelector('.tabs .tab.is-active').classList.remove('is-active');
+          tab_switcher.parentNode.classList.add('is-active');
+
+          SwitchPage(page_id);
+        });
+      }
+    }
+
+    function SwitchPage(page_id) {
+      console.log(page_id);
+
+      const current_page = document.querySelector('.pages .page.is-active');
+      current_page.classList.remove('is-active');
+
+      const next_page = document.querySelector(`.pages .page[data-page="${page_id}"]`);
+      next_page.classList.add('is-active');
+    }
+  </script>
+
+  <div class="Services" id="Services">
+    <div class="container">
+      <h5>SERVIES</h5> <br>
+      <h2>This is My Expertise, The Services <br> I'll Provide My Clients</h2>
+
+      <div class="content grid2">
+        <div class="box" data-aos="fade-right" data-aos-duration="3000">
+          <span><i class=" fa fa-code"></i> </span><br>
+          <h3>UI & UX Design</h3>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button> Read More <i class="fa fa-long-arrow-right"></i> </button>
+        </div>
+        <div class="box ">
+          <span><i class="fa fa-free-code-camp"></i> </span><br>
+          <h3>Web Development</h3>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button> Read More <i class="fa fa-long-arrow-right"></i> </button>
+        </div>
+        <div class="box " data-aos="fade-left" data-aos-duration="3000">
+          <span><i class="fa fa-desktop"></i> </span><br>
+          <h3>Graphic Design</h3>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button> Read More <i class="fa fa-long-arrow-right"></i> </button>
+        </div>
+      </div>
+      <div class="para">
+        <span>Have any works you want to done by me? <button>Contact Me</button> </span>
+        <br><br>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="review" id="Portfolio">
+    <div class="container grid2">
+      <div class="box">
+        <i class="fa fa-user"></i>
+        <div class="text">
+          <h1 class="counter">3,000</h1>
+          <h3>HAPPY CUSTOMER</h3>
+        </div>
+      </div>
+      <div class="box ">
+        <i class="fa fa-folder"></i>
+        <div class="text">
+          <h1 class="counter">2,000</h1>
+          <h3>PROJECT COMPLETED</h3>
+        </div>
+      </div>
+      <div class="box">
+        <i class="fa fa-coffee"></i>
+        <div class="text">
+          <h1 class="counter">1,000</h1>
+          <h3>CUPS OF COFFEE</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script>
+    jQuery(document).ready(function($) {
+      $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+      });
+    });
+  </script>
+
+
+
+  <section class="work" id="Portfolio">
+    <div class="container">
+      <div class="content grid">
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <img src="image/w1.jpeg" class="image">
+          <div class="middle">
+            <div class="text">
+              <h3> Branding & Illustration Design</h3>
+              <h4>WEB DESIGN</h4>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-left" data-aos-duration="1000">
+          <img src="image/w2.jpeg" class="image">
+          <div class="middle">
+            <div class="text">
+              <h3> Branding & Illustration Design</h3>
+              <h4>WEB DESIGN</h4>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <img src="image/w3.jpeg" class="image">
+          <div class="middle">
+            <div class="text">
+              <h3> Branding & Illustration Design</h3>
+              <h4>WEB DESIGN</h4>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-left" data-aos-duration="1000">
+          <img src="image/w4.jpeg" class="image">
+          <div class="middle">
+            <div class="text">
+              <h3> Branding & Illustration Design</h3>
+              <h4>WEB DESIGN</h4>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <img src="image/w5.jpeg" class="image">
+          <div class="middle">
+            <div class="text">
+              <h3> Branding & Illustration Design</h3>
+              <h4>WEB DESIGN</h4>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-left" data-aos-duration="1000">
+          <img src="image/w6.jpeg" class="image">
+          <div class="middle">
+            <div class="text">
+              <h3> Branding & Illustration Design</h3>
+              <h4>WEB DESIGN</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="customer">
+    <div class="container">
+      <h5>TESTIMONIAL</h5> <br>
+      <h2>Our Successful Students</h2>
+
+      <div class="content">
+        <div class="grid2">
+          <div class="item" data-aos="fade-up-right" data-aos-duration="1000">
+            <div class="top flex">
+              <div class="left">
+                <img src="image/t.jpg" alt="">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <div class="right">
+                <h2>ROGER SCOTT</h2>
+                <h5>MARKETING MANAGER</h5>
+              </div>
+            </div>
+            <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="item">
+            <div class="top flex">
+              <div class="left">
+                <img src="image/t.jpg" alt="">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <div class="right">
+                <h2>ROGER SCOTT</h2>
+                <h5>MARKETING MANAGER</h5>
+              </div>
+            </div>
+            <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="item" data-aos="fade-up-left" data-aos-duration="1000">
+            <div class="top flex">
+              <div class="left">
+                <img src="image/t.jpg" alt="">
+                <i class="fa fa-quote-left"></i>
+              </div>
+              <div class="right">
+                <h2>ROGER SCOTT</h2>
+                <h5>MARKETING MANAGER</h5>
+              </div>
+            </div>
+            <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog" id="Blog">
+    <div class="container">
+      <h5>OUR BLOG</h5> <br>
+      <h2>Recent From Blog</h2>
+
+      <div class="content grid">
+
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <div class="img">
+            <img src="image/b1.jpeg" alt="">
+          </div>
+          <div class="bottom">
+            <div class="icon ">
+              <i class="fa fa-calendar"></i>
+              <label>MAY. 28, 2021</label>
+              <i class="fa fa-comment"></i>
+              <h5>3 COMMENTS</h5>
+            </div>
+            <div class="text">
+              <h3>Tips About Creating A New Web Design</h3>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-left" data-aos-duration="1000">
+          <div class="img">
+            <img src="image/w1.jpeg" alt="">
+          </div>
+          <div class="bottom">
+            <div class="icon ">
+              <i class="fa fa-calendar"></i>
+              <label>MAY. 28, 2021</label>
+              <i class="fa fa-comment"></i>
+              <h5>3 COMMENTS</h5>
+            </div>
+            <div class="text">
+              <h3>Tips About Creating A New Web Design</h3>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <div class="img">
+            <img src="image/b3.jpeg" alt="">
+          </div>
+          <div class="bottom">
+            <div class="icon ">
+              <i class="fa fa-calendar"></i>
+              <label>MAY. 28, 2021</label>
+              <i class="fa fa-comment"></i>
+              <h5>3 COMMENTS</h5>
+            </div>
+            <div class="text">
+              <h3>Tips About Creating A New Web Design</h3>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-left" data-aos-duration="1000">
+          <div class="img">
+            <img src="image/b4.jpeg" alt="">
+          </div>
+          <div class="bottom">
+            <div class="icon ">
+              <i class="fa fa-calendar"></i>
+              <label>MAY. 28, 2021</label>
+              <i class="fa fa-comment"></i>
+              <h5>3 COMMENTS</h5>
+            </div>
+            <div class="text">
+              <h3>Tips About Creating A New Web Design</h3>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <div class="img">
+            <img src="image/w3.jpeg" alt="">
+          </div>
+          <div class="bottom">
+            <div class="icon ">
+              <i class="fa fa-calendar"></i>
+              <label>MAY. 28, 2021</label>
+              <i class="fa fa-comment"></i>
+              <h5>3 COMMENTS</h5>
+            </div>
+            <div class="text">
+              <h3>Tips About Creating A New Web Design</h3>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box" data-aos="fade-up-left" data-aos-duration="1000">
+          <div class="img">
+            <img src="image/b6.jpeg" alt="">
+          </div>
+          <div class="bottom">
+            <div class="icon ">
+              <i class="fa fa-calendar"></i>
+              <label>MAY. 28, 2021</label>
+              <i class="fa fa-comment"></i>
+              <h5>3 COMMENTS</h5>
+            </div>
+            <div class="text">
+              <h3>Tips About Creating A New Web Design</h3>
+              <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="price" id="Price">
+    <div class="container">
+      <h5>MY PRICING</h5> <br>
+      <h2>Pricing & Packages</h2><br><br>
+
+      <div class="content grid2">
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <h5>BASIC PLAN</h5> <br>
+          <h1> <span>$</span> 49K</h1><br><br>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br><br>
+          <button class="btn1">GET STARTED</button>
+        </div>
+        <div class="box">
+          <h5>BASIC PLAN</h5> <br>
+          <h1> <span>$</span> 49K</h1><br><br>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br><br>
+          <button class="btn1">GET STARTED</button>
+        </div>
+        <div class="box" data-aos="fade-up-left" data-aos-duration="1000">
+          <h5>BASIC PLAN</h5> <br>
+          <h1> <span>$</span> 49K</h1><br><br>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br><br>
+          <button class="btn1">GET STARTED</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact " id="Contact">
+    <div class="content flex">
+      <div class="left" data-aos="fade-up-right" data-aos-duration="1000">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1622120030619!5m2!1sen!2snp" width="600" height="450"
+          style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="right" data-aos="fade-down-left" data-aos-duration="1000">
+        <h2>Contact us</h2>
+        <p>We're open for any suggestion or just to have a chat</p>
+        <br>
+        <div class="text flex">
+          <div class="para">
+            <h4>MY ADDRESS:</h4>
+            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+          </div>
+
+          <div class="para">
+            <h4>MY EMAIL:</h4>
+            <p>info@yoursite.com</p>
+          </div>
+          <div class="para">
+            <h4>MY PHONE:</h4>
+            <p>+ 1235 2355 98</p>
+          </div>
+        </div>
+
+        <form>
+          <div class="box grid">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+          </div>
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Create a message here" rows="8" cols="80"></textarea>
+          <button class="btn">SEND MESSAGE</button>
+        </form>
+
+        <h3>Follow me here</h3>
+        <label>FACEBOOK</label>
+        <label> TWITTER</label>
+        <label> INSTAGRAM</label>
+        <label> DRIBBBLE</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact_second">
+    <div class="container flex">
+      <div class="text ">
+        <h3>Have any works you want to done by me?</h3>
+        <p>Far far away, behind the word mountains</p>
+      </div>
+      <button class="btn1">CONTACT US</button>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="container">
+      <div class="content grid2">
+        <div class="box" data-aos="fade-up-right" data-aos-duration="1000">
+          <h3>Dot Studio</h3><br>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br>
+          <span class="fa fa-twitter"></span>
+          <span class="fa fa-youtube"></span>
+          <span class="fa fa-instagram"></span>
+        </div>
+        <div class="box box1">
+          <h4>Services</h4>
+          <ul>
+            <li> <i class="fa fa-long-arrow-right"></i>Web Design </li>
+            <li> <i class="fa fa-long-arrow-right"></i>Web Development </li>
+            <li> <i class="fa fa-long-arrow-right"></i>Graphic Design </li>
+            <li> <i class="fa fa-long-arrow-right"></i>UI/UX Design </li>
+          </ul>
+        </div>
+
+        <div class="box box1" data-aos="fade-down-left" data-aos-duration="1000">
+          <h4>Have a Questions?</h4> <br>
+          <i class="fa fa-map-marker"></i>
+          <label>203 Fake St. Mountain View, San Francisco </label>
+          <br>
+          <i class=" fa fa-phone"></i>
+          <label> +2 392 3929 210 </label>
+          <br>
+          <i class="fa fa-paper-plane"></i>
+          <label> info@yourdomain.com</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal">
+    <p>Copyright (c) 2021 Copyright Holder All Rights Reserved | This template is made with <i class="fa fa-heart"></i> by <span>Dot Studio</span> </p>
+  </section>
+
+  <!--   counterUp   -->
+  <script src="js/jquery.counterup.min.js" charset="utf-8"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <!--   counterUp   -->
+
+
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
